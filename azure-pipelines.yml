@@ -2,7 +2,6 @@
 # Archive your static HTML project and save it with the build record.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
-
 trigger:
 - master
 
@@ -16,8 +15,3 @@ steps:
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
 - task: AzureCloudPowerShellDeployment@1
-  inputs:
-    EnableAdvancedStorageOptions: false
-    CsPkg: 
-    slotName: 'Production'
-    AllowUpgrade: true
