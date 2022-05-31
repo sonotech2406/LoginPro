@@ -15,3 +15,9 @@ steps:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
+- task: AzureCloudPowerShellDeployment@1
+  inputs:
+    EnableAdvancedStorageOptions: false
+    CsPkg: 
+    slotName: 'Production'
+    AllowUpgrade: true
